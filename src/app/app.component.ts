@@ -6,7 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'aluraPic';
-  description = 'Leão';
-  url = 'http://www.yourmomhatesthis.com/images/2016/12/Lion-PNG-Clipart.png';
+  photos = [
+    {
+      url:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Sultan_the_Barbary_Lion.jpg/440px-Sultan_the_Barbary_Lion.jpg',
+      description: 'Lion'
+    },
+    {
+      url:
+        'https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Lioness_Etosha_NP.jpg/500px-Lioness_Etosha_NP.jpg',
+      description: 'Lioness'
+    }
+  ];
 }
