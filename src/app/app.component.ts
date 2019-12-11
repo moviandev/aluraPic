@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'aluraPic';
+  description = 'Leão';
+  url = 'http://www.yourmomhatesthis.com/images/2016/12/Lion-PNG-Clipart.png';
 }
