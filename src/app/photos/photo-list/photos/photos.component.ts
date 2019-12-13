@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Photo } from '../../photo/photo';
 
 @Component({
   selector: 'ap-photos',
@@ -6,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./photos.component.scss']
 })
 export class PhotosComponent implements OnInit {
+  photos: Photo[] = [];
+
   constructor() {}
 
   ngOnInit() {}
