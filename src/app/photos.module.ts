@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { PhotoComponent } from './photos/photo/photo.component';
+import { HttpClientModule } from '@angular/common/http';
 
 /*
   A module can have lots ad lots of declarions, but I have to export those declarions to be accessible outside of this module
@@ -8,6 +9,7 @@ import { PhotoComponent } from './photos/photo/photo.component';
 
 @NgModule({
   declarations: [PhotoComponent],
-  exports: [PhotoComponent]
+  exports: [PhotoComponent],
+  imports: [HttpClientModule]
 })
 export class PhotosModule {}

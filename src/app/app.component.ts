@@ -12,7 +12,6 @@ export class AppComponent implements OnInit {
   photos: Photo[] = [];
 
   // Constructor just to inject data
-
   constructor(private photoService: PhotoService) {}
 
   ngOnInit(): void {
