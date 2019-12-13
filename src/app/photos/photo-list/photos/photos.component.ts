@@ -20,7 +20,7 @@ export class PhotosComponent implements OnInit {
     const newRows = [];
 
     for (let i = 0; i < photos.length; i += 3) {
-      newRows.push(photos.splice(i, i + 3));
+      newRows.push(photos.slice(i, i + 3));
     }
 
     return newRows;
