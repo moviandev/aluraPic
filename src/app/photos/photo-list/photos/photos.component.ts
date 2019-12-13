@@ -16,7 +16,7 @@ export class PhotosComponent implements OnInit {
     this.rows = this.groupColumns(this.photos);
   }
 
-  groupColumns(photos: Photo[]) {
+  groupColumns(photos: Photo[]): any[] {
     const newRows = [];
 
     for (let i = 0; i < photos.length; i += 3) {
