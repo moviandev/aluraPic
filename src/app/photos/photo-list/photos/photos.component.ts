@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Photo } from '../../photo/photo';
 
 @Component({
@@ -7,7 +7,7 @@ import { Photo } from '../../photo/photo';
   styleUrls: ['./photos.component.scss']
 })
 export class PhotosComponent implements OnInit {
-  photos: Photo[] = [];
+  @Input() photos: Photo[] = [];
 
   constructor() {}
 
