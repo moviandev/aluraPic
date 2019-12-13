@@ -7,9 +7,14 @@ import { HttpClient } from '@angular/common/http';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  photos = [];
+  photos: object[] = [];
 
   constructor(http: HttpClient) {
-    console.log(http);
+    const observable = http
+      .get<object[]>('http://localhost:3000/flavio/photos')
+      .subscribe(
+        pht => (this.photos = pht),
+        err => console.log(err.message)
+      );
   }
 }
