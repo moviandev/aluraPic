@@ -11,7 +11,7 @@ import { Photo } from './photos/photo/photo';
 export class AppComponent implements OnInit {
   photos: Photo[] = [];
 
-  // COnstructor just to inject data
+  // Constructor just to inject data
 
   constructor(private photoService: PhotoService) {}
 
