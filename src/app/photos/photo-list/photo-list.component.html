@@ -1,1 +1,6 @@
-<p>photo-list works!</p>
+<!-- *ngFor is a directive to loop through the arrays -->
+<ap-photo-list
+  *ngFor="let photo of photos"
+  [url]="photo.url"
+  [description]="photo.description"
+></ap-photo-list>
