@@ -15,7 +15,7 @@ export class PhotoService {
   }
 
   listFromUserPaginated(userName: string, page: number): Observable<Photo[]> {
-    const params = new HttpParams();
-    return this.http.get<Photo[]>(`${API}/${userName}/photos`);
+    const params = new HttpParams().append('page', page.toString());
+    return this.http.get<Photo[]>(`${API}/${userName}/photos`, { params });
   }
 }
