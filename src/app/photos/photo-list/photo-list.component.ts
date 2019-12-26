@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { Subject } from 'rxjs';
 
 import { Photo } from '../photo/photo';
 
@@ -11,11 +12,13 @@ import { Photo } from '../photo/photo';
 export class PhotoListComponent implements OnInit {
   photos: Photo[] = [];
   filter: string;
+  debounce: Subject<string> = new Subject<string>();
 
   // Constructor just to inject data
   constructor(private activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.photos = this.activatedRoute.snapshot.data.photos;
+    this.debounce.subscribe(f => (this.filter = f));
   }
 }
