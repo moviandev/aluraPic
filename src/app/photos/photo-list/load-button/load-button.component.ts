@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./load-button.component.scss']
 })
 export class LoadButtonComponent implements OnInit {
+  hasMore = false;
+
   constructor() {}
 
   ngOnInit() {}
