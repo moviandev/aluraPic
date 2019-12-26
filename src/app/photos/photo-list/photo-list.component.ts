@@ -17,6 +17,8 @@ export class PhotoListComponent implements OnInit, OnDestroy {
   filter: string;
   debounce: Subject<string> = new Subject<string>();
   hasMore = false;
+  currentPage = 1;
+  userName: string;
 
   // Constructor just to inject data
   constructor(
@@ -25,6 +27,7 @@ export class PhotoListComponent implements OnInit, OnDestroy {
   ) {}
 
   ngOnInit(): void {
+    this.userName = this.activatedRoute.snapshot.params.userName;
     this.photos = this.activatedRoute.snapshot.data.photos;
     this.debounce.pipe(debounceTime(300)).subscribe(f => (this.filter = f));
   }
