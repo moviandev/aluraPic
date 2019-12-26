@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Subject } from 'rxjs';
+// Lettable operators
+import { debounceTime } from 'rxjs/operators';
 
 import { Photo } from '../photo/photo';
 
@@ -19,6 +21,6 @@ export class PhotoListComponent implements OnInit {
 
   ngOnInit(): void {
     this.photos = this.activatedRoute.snapshot.data.photos;
-    this.debounce.subscribe(f => (this.filter = f));
+    this.debounce.pipe(debounceTime(300)).subscribe(f => (this.filter = f));
   }
 }
