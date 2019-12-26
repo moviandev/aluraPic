@@ -12,8 +12,6 @@ export class PhotoListComponent implements OnInit {
   photos: Photo[] = [];
   filter: string;
 
-  name: string = 'Matheus';
-
   // Constructor just to inject data
   constructor(
     private photoService: PhotoService,
