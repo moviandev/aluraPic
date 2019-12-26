@@ -1,7 +1,7 @@
 <!-- *ngFor is a directive to loop through the arrays -->
 <ol class="list-unstyled row">
   <li *ngFor="let cols of rows" class="col-4">
-    <div col="col-3" *ngFor="let p of cols">
+    <div col="col-4" *ngFor="let p of cols">
       <ap-photo [url]="p.url" [description]="p.description"></ap-photo>
     </div>
   </li>
