@@ -7,6 +7,7 @@ import { PhotoListComponent } from './photos/photo-list/photo-list.component';
 import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
 import { PhotosComponent } from './photos/photo-list/photos/photos.component';
 import { FilterByDescriptionPipe } from './photos/photo-list/filterByDescription.pipe';
+import { LoadButtonComponent } from './photos/photo-list/load-button/load-button.component';
 
 /*
   A module can have lots ad lots of declarions, but I have to export those declarions to be accessible outside of this module
@@ -19,7 +20,8 @@ import { FilterByDescriptionPipe } from './photos/photo-list/filterByDescription
     PhotoListComponent,
     PhotoFormComponent,
     PhotosComponent,
-    FilterByDescriptionPipe
+    FilterByDescriptionPipe,
+    LoadButtonComponent
   ],
   imports: [HttpClientModule, CommonModule]
 })
