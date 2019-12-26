@@ -10,7 +10,7 @@ const routes: Routes = [
   {
     path: 'user/:userName',
     component: PhotoListComponent,
-    resolve: PhotoListResolver
+    resolve: { photos: PhotoListResolver }
   },
   { path: 'p/add', component: PhotoFormComponent },
   { path: '**', component: NotFoundComponent }
