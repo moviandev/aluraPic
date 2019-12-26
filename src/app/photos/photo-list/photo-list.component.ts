@@ -16,7 +16,7 @@ export class PhotoListComponent implements OnInit, OnDestroy {
   photos: Photo[] = [];
   filter: string;
   debounce: Subject<string> = new Subject<string>();
-  hasMore = false;
+  hasMore = true;
   currentPage = 1;
   userName: string;
 
@@ -34,5 +34,16 @@ export class PhotoListComponent implements OnInit, OnDestroy {
 
   ngOnDestroy(): void {
     this.debounce.unsubscribe();
+  }
+
+  load() {
+    this.photoService
+      .listFromUserPaginated(this.userName, ++this.currentPage)
+      .subscribe(p => {
+        this.photos.push(...p);
+        if (!p.length) {
+          this.hasMore = false;
+        }
+      });
   }
 }
