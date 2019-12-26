@@ -6,6 +6,7 @@ import { PhotoComponent } from './photos/photo/photo.component';
 import { PhotoListComponent } from './photos/photo-list/photo-list.component';
 import { PhotoFormComponent } from './photos/photo-form/photo-form.component';
 import { PhotosComponent } from './photos/photo-list/photos/photos.component';
+import { FilterByDescriptionPipe } from './photos/photo-list/filterByDescription.pipe';
 
 /*
   A module can have lots ad lots of declarions, but I have to export those declarions to be accessible outside of this module
@@ -13,7 +14,13 @@ import { PhotosComponent } from './photos/photo-list/photos/photos.component';
 // if I have 100 components in declarions I must have them into exports as well
 
 @NgModule({
-  declarations: [PhotoComponent, PhotoListComponent, PhotoFormComponent, PhotosComponent],
+  declarations: [
+    PhotoComponent,
+    PhotoListComponent,
+    PhotoFormComponent,
+    PhotosComponent,
+    FilterByDescriptionPipe
+  ],
   imports: [HttpClientModule, CommonModule]
 })
 export class PhotosModule {}
