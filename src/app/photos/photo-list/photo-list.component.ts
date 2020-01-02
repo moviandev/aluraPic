@@ -40,7 +40,7 @@ export class PhotoListComponent implements OnInit, OnDestroy {
     this.photoService
       .listFromUserPaginated(this.userName, ++this.currentPage)
       .subscribe(p => {
-        this.photos = this.photos.concat(p);
+        this.photos.push(...p);
         if (!p.length) {
           this.hasMore = false;
         }
