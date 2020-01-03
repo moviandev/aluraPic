@@ -22,7 +22,7 @@ export class PhotosComponent implements OnChanges {
     const newRows = [];
 
     for (let i = 0; i < photos.length; i++) {
-      newRows.push(photos.slice(i, i + 3));
+      newRows.push(photos.slice(i, i + 1));
     }
 
     return newRows;
