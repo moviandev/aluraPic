@@ -12,7 +12,6 @@ import { PhotoModule } from './photo/photo.module';
 // if I have 100 components in declarions I must have them into exports as well
 
 @NgModule({
-  declarations: [],
   imports: [
     HttpClientModule,
     CommonModule,
