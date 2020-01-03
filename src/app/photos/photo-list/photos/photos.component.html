@@ -3,8 +3,8 @@
   Sorry, photo not found.
 </p>
 <ol class="list-unstyled row">
-  <li *ngFor="let cols of rows" class="col-4">
-    <div col="col-4" *ngFor="let p of cols">
+  <li *ngFor="let cols of rows" class="row no-gutters">
+    <div *ngFor="let p of cols" class="col-4">
       <ap-photo [url]="p.url" [description]="p.description"></ap-photo>
     </div>
   </li>
