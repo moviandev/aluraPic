@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 import { PhotoListModule } from './photo-list/photo-list.module';
 import { PhotoFormModule } from './photo-form/photo-form.module';
+import { PhotoModule } from './photo/photo.module';
 
 /*
   A module can have lots ad lots of declarions, but I have to export those declarions to be accessible outside of this module
@@ -12,6 +13,12 @@ import { PhotoFormModule } from './photo-form/photo-form.module';
 
 @NgModule({
   declarations: [],
-  imports: [HttpClientModule, CommonModule, PhotoListModule, PhotoFormModule]
+  imports: [
+    HttpClientModule,
+    CommonModule,
+    PhotoListModule,
+    PhotoFormModule,
+    PhotoModule
+  ]
 })
 export class PhotosModule {}
