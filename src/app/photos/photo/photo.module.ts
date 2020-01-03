@@ -6,6 +6,7 @@ import { PhotoComponent } from './photo.component';
 
 @NgModule({
   declarations: [PhotoComponent],
-  imports: [HttpClientModule, CommonModule]
+  imports: [HttpClientModule, CommonModule],
+  exports: [PhotoComponent]
 })
 export class PhotoModule {}

@@ -13,6 +13,6 @@ import { FilterByDescriptionPipe } from './filterByDescription.pipe';
     LoadButtonComponent,
     FilterByDescriptionPipe
   ],
-  import: [CommonModule]
+  imports: [CommonModule]
 })
 export class PhotoListModule {}
