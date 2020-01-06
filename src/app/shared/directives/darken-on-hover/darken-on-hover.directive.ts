@@ -6,4 +6,12 @@ import { Directive, ElementRef } from '@angular/core';
 })
 export class DarkenOnHoverDirective {
   constructor(private el: ElementRef) {}
+
+  darkenOn() {
+    console.log('darken ON');
+  }
+
+  darkenOff() {
+    console.log('darken OFF');
+  }
 }
