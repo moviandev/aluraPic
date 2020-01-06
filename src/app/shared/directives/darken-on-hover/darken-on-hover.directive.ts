@@ -1,5 +1,6 @@
 import { Directive } from '@angular/core';
 
+// to use <a apDarkenOnHover> is necessary to put the selector name into brackets
 @Directive({
   selector: '[apDarkenOnHover]'
 })
