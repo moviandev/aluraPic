@@ -11,7 +11,7 @@ import { PhotoService } from '../photo/photo.service';
 })
 export class PhotoListComponent implements OnInit {
   photos: Photo[] = [];
-  filter: string;
+  filter = '';
   hasMore = true;
   currentPage = 1;
   userName: string;
@@ -29,6 +29,7 @@ export class PhotoListComponent implements OnInit {
     this.photoService
       .listFromUserPaginated(this.userName, ++this.currentPage)
       .subscribe(p => {
+        this.filter = '';
         this.photos = this.photos.concat(p);
         if (!p.length) {
           this.hasMore = false;

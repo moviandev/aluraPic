@@ -7,6 +7,7 @@ import {
 } from '@angular/core';
 import { Subject } from 'rxjs';
 import { debounceTime } from 'rxjs/operators';
+import { Input } from '@angular/core';
 
 @Component({
   selector: 'ap-search',
@@ -15,6 +16,7 @@ import { debounceTime } from 'rxjs/operators';
 })
 export class SearchComponent implements OnInit, OnDestroy {
   @Output() typed = new EventEmitter<string>();
+  @Input() value = '';
 
   debounce: Subject<string> = new Subject<string>();
 
