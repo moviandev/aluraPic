@@ -15,7 +15,6 @@ import { PhotoService } from '../photo/photo.service';
 export class PhotoListComponent implements OnInit, OnDestroy {
   photos: Photo[] = [];
   filter: string;
-  debounce: Subject<string> = new Subject<string>();
   hasMore = true;
   currentPage = 1;
   userName: string;
