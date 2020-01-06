@@ -6,6 +6,12 @@
   <li *ngFor="let cols of rows" class="row no-gutters">
     <div *ngFor="let p of cols" class="col-4">
       <ap-photo [url]="p.url" [description]="p.description"></ap-photo>
+      <div class="text-center">
+        <i aria-hidden="true" class="fa fa-heart-o fa-1x mr-2"></i
+        >{{ p.likes }}
+        <i aria-hidden="true" class="fa fa-comment-o fa-1x mr-2 ml-2"></i
+        >{{ p.comments }}
+      </div>
     </div>
   </li>
 </ol>
