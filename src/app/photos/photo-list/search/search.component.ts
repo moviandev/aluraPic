@@ -14,7 +14,7 @@ import { debounceTime } from 'rxjs/operators';
   styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements OnInit, OnDestroy {
-  @Output() typed: EventEmitter<string> = new EventEmitter();
+  @Output() typed = new EventEmitter<string>();
 
   debounce: Subject<string> = new Subject<string>();
 
