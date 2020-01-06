@@ -4,7 +4,7 @@
     () => pulling data from the view "template" to the component
   ==> Data Binding <==
 -->
-<ap-search (onTyping)="filter = $event"></ap-search>
+<ap-search (typed)="filter = $event"></ap-search>
 
 <ap-photos [photos]="photos | filterByDescription: filter"></ap-photos>
 
