@@ -1,10 +1,8 @@
 import { Directive } from '@angular/core';
 
 @Directive({
-  selector: '[appDarkenOnHover]'
+  selector: '[apDarkenOnHover]'
 })
 export class DarkenOnHoverDirective {
-
-  constructor() { }
-
+  constructor() {}
 }
