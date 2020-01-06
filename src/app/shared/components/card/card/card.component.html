@@ -1,5 +1,7 @@
 <div class="card border-light text-center">
-  <h4 class="card-header">{{ title }}</h4>
+  <div *ngIf="title">
+    <h4 class="card-header">{{ title }}</h4>
+  </div>
   <div class="card-block text-justify">
     <ng-content></ng-content>
   </div>
