@@ -1,4 +1,4 @@
-import { Directive, ElementRef } from '@angular/core';
+import { Directive, ElementRef, HostListener } from '@angular/core';
 
 // to use <a apDarkenOnHover> is necessary to put the selector name into brackets
 @Directive({
@@ -7,10 +7,12 @@ import { Directive, ElementRef } from '@angular/core';
 export class DarkenOnHoverDirective {
   constructor(private el: ElementRef) {}
 
+  @HostListener('mouseover')
   darkenOn() {
     console.log('darken ON');
   }
 
+  @HostListener('mouseleave')
   darkenOff() {
     console.log('darken OFF');
   }
