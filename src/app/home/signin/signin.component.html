@@ -4,14 +4,14 @@
   <div class="form-group">
     <input
       #usernameInput
-      formControlName="username"
+      formControlName="userName"
       class="form-control"
       placeholder="user name"
       autofocus
     />
     <ap-vmessage
       text="Username is required"
-      *ngIf="loginForm.get('username').errors?.required"
+      *ngIf="loginForm.get('userName').errors?.required"
     ></ap-vmessage>
   </div>
 

@@ -9,11 +9,11 @@ const API = 'http://localhost:3000';
 export class AuthService {
   constructor(private http: HttpClient) {}
 
-  authenticate(username: string, password: string) {
+  authenticate(userName: string, password: string) {
     return this.http
       .post(
         `${API}/user/login`,
-        { username, password },
+        { userName, password },
         { observe: 'response' }
       )
       .pipe(
