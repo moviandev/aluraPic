@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { AuthService } from '../../core/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   templateUrl: './signin.component.html',
@@ -11,7 +12,8 @@ export class SigninComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder,
-    private authService: AuthService
+    private authService: AuthService,
+    private router: Router
   ) {}
 
   ngOnInit() {
@@ -25,6 +27,9 @@ export class SigninComponent implements OnInit {
     const username = this.loginForm.get('username').value;
     const password = this.loginForm.get('password').value;
 
-    this.authService.authenticate(username, password);
+    this.authService.authenticate(username, password).subscribe(
+      () => this.router.navigateByUrl(`user/${username}`),
+      err => console.log(err)
+    );
   }
 }
