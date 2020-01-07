@@ -9,6 +9,6 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   authenticate(username: string, password: string) {
-    this.http.post(`${API}/user/login`, { username, password });
+    return this.http.post(`${API}/user/login`, { username, password });
   }
 }

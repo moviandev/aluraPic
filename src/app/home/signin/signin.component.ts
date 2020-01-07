@@ -22,6 +22,9 @@ export class SigninComponent implements OnInit {
   }
 
   login() {
-    console.log('VAI SE AUTENTICAR');
+    const username = this.loginForm.get('username').value;
+    const password = this.loginForm.get('password').value;
+
+    this.authService.authenticate(username, password);
   }
 }
