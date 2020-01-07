@@ -31,7 +31,11 @@
     </small>
   </div>
 
-  <button type="submit" class="btn btn-primary btn-block">
+  <button
+    [disabled]="loginForm"
+    type="submit"
+    class="btn btn-primary btn-block"
+  >
     login
   </button>
 </form>
