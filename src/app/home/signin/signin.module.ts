@@ -5,6 +5,6 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [SigninComponent],
-  imports: [CommonModule, , ReactiveFormsModule]
+  imports: [CommonModule, ReactiveFormsModule]
 })
 export class SigninModule {}
