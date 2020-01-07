@@ -8,7 +8,10 @@
       placeholder="user name"
       autofocus
     />
-    <small class="text-danger d-block mt-2">
+    <small
+      *ngIf="loginForm.get('username').errors.required"
+      class="text-danger d-block mt-2"
+    >
       User name is required!
     </small>
   </div>
@@ -20,7 +23,10 @@
       class="form-control"
       placeholder="password"
     />
-    <small class="text-danger d-block mt-2">
+    <small
+      *ngIf="loginForm.get('password').errors.required"
+      class="text-danger d-block mt-2"
+    >
       User name is required!
     </small>
   </div>
